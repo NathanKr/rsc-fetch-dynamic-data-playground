@@ -1,6 +1,9 @@
+import { pauseMs } from "@/utils/utils";
 
 async function fetchPosts() {
-  const res = await fetch('https://jsonplaceholder.typicode.com1/posts');
+  await pauseMs(2000); // --- pause just so we can see loader
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  
   if (!res.ok) {
     throw new Error('Failed to fetch posts');
   }
