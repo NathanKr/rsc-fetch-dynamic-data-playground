@@ -1,9 +1,9 @@
-import { GOOD_POSTS_URL } from "@/utils/constants";
+import { BAD_POSTS_URL, GOOD_POSTS_URL } from "@/utils/constants";
 import { pauseMs } from "@/utils/utils";
 
 async function fetchPosts() {
   await pauseMs(2000); // --- pause just so we can see loader
-  const res = await fetch(GOOD_POSTS_URL);
+  const res = await fetch(BAD_POSTS_URL);
   
   if (!res.ok) {
     throw new Error('Failed to fetch posts');
@@ -14,7 +14,6 @@ async function fetchPosts() {
 
 export default async function PostsCount() {
   const postCount = await fetchPosts();
-
   return (
     <div>
       <h1>Number of Posts</h1>
