@@ -1,43 +1,30 @@
-
-
-<h2>Table of Contents</h2>
-<ul>
-    <li><a href="#project-description">Project Description</a></li>
-    <li><a href="#motivation">Motivation</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#design">Design</a></li>
-    <li><a href="#technologies-used">Technologies Used</a></li>
-    <li><a href="#code-structure">Code Structure</a></li>
-    <li><a href="#demo">Demo</a></li>
-    <li><a href="#points-of-interest">Points of Interest</a></li>
-    <li><a href="#references">References</a></li>
-</ul>
-
 <h2 id="project-description">Project Description</h2>
 <p>A concise and informative summary of the project's purpose, key features, and target audience.</p>
 
 <h2 id="motivation">Motivation</h2>
-<p>A clear explanation of the reasons behind the project's creation, including the problem it addresses and the benefits it offers.</p>
+In the first two references <a href='#ref1'>[1]</a> , <a href='#ref2'>[2]</a> we gather info on rsc vs rcc for 'hello world' and static data fetch (ssg). Now its time to fetch data dynamically (ssr) using rsc. In ssg (build time) there is no need for our code to handle error and loading state but in ssr it is required for good ux. But 
+
+<ul>
+<li>how to do it in next.js ??</li>
+<li>how to handle error in server component ??</li>
+<li>how to handle loading in server component ??</li>
+</ul>
+
 
 <h2 id="installation">Installation</h2>
-<p>Step-by-step instructions on how to set up the development environment and install necessary dependencies. </p>
+
+```bash
+pnpm i
+```
 
 
 <h2 id="usage">Usage</h2>
-<p>Instructions on how to use the project, including examples, screenshots, or code snippets</p>
+
+```bash
+pnpm run dev
+```
 
 
-<h2 id="design">Design</h2>
-<p>A high-level overview of the project's architecture, design patterns, and key components.</p>
-
-<h2 id="technologies-used">Technologies Used</h2>
-<ul>
-    <li>Frontend technologies (e.g., React, Vue, Angular)</li>
-    <li>Backend technologies (e.g., Node.js, Python, Ruby)</li>
-    <li>Databases (e.g., MySQL, PostgreSQL, MongoDB)</li>
-    <li>Cloud platforms (if applicable)</li>
-</ul>
 
 <h2 id="code-structure">Code Structure</h2>
 <p>An explanation of the project's code structure, including important files and directories.</p>
@@ -51,15 +38,13 @@
 
 <h2 id="points-of-interest">Points of Interest</h2>
 <ul>
-    <li>Innovative features</li>
-    <li>Technical challenges and solutions</li>
-    <li>Lessons learned</li>
+    <li>why error.tsx has "use client"</li>
+    
 </ul>
 
 <h2 id="references">References</h2>
 <ul>
-    <li>External libraries or frameworks</li>
-    <li>Articles or tutorials</li>
-    <li>Other relevant resources</li>
+    <li id='ref1'><a href='https://youtu.be/7WhcpereZkQ'>Mastering Server vs. Client Components in Next.js! </a></li>
+    <li id='ref2'><a href='https://youtu.be/ck8ZEuPmhSM'> RSC vs RCC: Data Fetching Showdown (with Code Examples) </a></li>
 </ul>
 
