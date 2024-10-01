@@ -1,33 +1,49 @@
-<h2 id="project-description">Project Description</h2>
-<p>A concise and informative summary of the project's purpose, key features, and target audience.</p>
+<h2>Project Description</h2>
+............
 
-<h2 id="motivation">Motivation</h2>
+<h2>Motivation</h2>
 In the first two references <a href='#ref1'>[1]</a> , <a href='#ref2'>[2]</a> we gather info on rsc vs rcc for 'hello world' and static data fetch (ssg). Now its time to fetch data dynamically (ssr) using rsc. In ssg (build time) there is no need for our code to handle error and loading state but in ssr it is required for good ux. But 
 
 <ul>
 <li>how to do it in next.js ??</li>
 <li>how to handle error in server component ??</li>
+<li>what if you dont handle error in server component ??</li>
 <li>how to handle loading in server component ??</li>
 </ul>
 
 
-<h2 id="installation">Installation</h2>
+<h2>Installation</h2>
 
 ```bash
 pnpm i
 ```
 
 
-<h2 id="usage">Usage</h2>
+<h2>Usage</h2>
 
 ```bash
 pnpm run dev
 ```
+use fetch with BAD_POSTS_URL to issue an error
+
+<h2>Home page</h2>
+
+<h2>PostsCount - react server component</h2>
+React server component
+
+```ts
+...
+```
+
+<h2>loading.tsx</h2>
+in Home page directory
+called by next.js framework as long as PostsCount did not finished
 
 
+<h2>error.tsx</h2>
+in Home page directory
+called by next.js framework when PostsCount throw exception
 
-<h2 id="code-structure">Code Structure</h2>
-<p>An explanation of the project's code structure, including important files and directories.</p>
 
 <h2 id="demo">Demo</h2>
 <p>A link to a live demo or a GIF/video showcasing the project's functionality.</p>
