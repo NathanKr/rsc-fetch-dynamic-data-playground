@@ -1,13 +1,14 @@
 <h2>Project Description</h2>
-............
+This project demonstrates the use of React Server Components (RSC) in Next.js to handle dynamic server-side rendering (SSR) with proper error and loading states. The project includes server-side data fetching, error handling, and dynamic rendering using Next.js components.
+
+
 
 <h2>Motivation</h2>
-In the first two references <a href='#ref1'>[1]</a> , <a href='#ref2'>[2]</a> we gather info on rsc vs rcc for 'hello world' and static data fetch (ssg). Now its time to fetch data dynamically (ssr) using rsc. In ssg (build time) there is no need for our code to handle error and loading state but in ssr it is required for good ux. But 
+  In the first two references, <a href='#ref1'>[1]</a> and <a href='#ref2'>[2]</a>, we explored RSC vs RCC for 'hello world' and static data fetching (SSG). Now, it’s time to fetch data dynamically (SSR) using RSC. Unlike SSG (build time), where there’s no need to handle errors and loading states, SSR requires proper handling for a better user experience. This project addresses the following key questions:
 
 <ul>
 <li>how to do it in next.js ??</li>
-<li>how to handle error in server component ??</li>
-<li>what if you dont handle error in server component ??</li>
+<li>how to handle error in server component ?</li>
 <li>how to handle loading in server component ??</li>
 </ul>
 
@@ -24,7 +25,8 @@ pnpm i
 ```bash
 pnpm run dev
 ```
-use fetch with BAD_POSTS_URL to issue an error
+<p>Use the following setup to test error handling: replace <code>GOOD_POSTS_URL</code> with <code>BAD_POSTS_URL</code> to issue an error.</p>
+
 
 <h2>Home page</h2>
 
@@ -40,7 +42,7 @@ export default function Home() {
 ```
 
 <h2>PostsCount - react server component</h2>
-React server component
+This component fetches post data from the server and displays the count
 
 ```ts
 async function fetchPosts() {
@@ -65,8 +67,8 @@ export default async function PostsCount() {
 ```
 
 <h2>loading.tsx</h2>
-in Home page directory
-called by next.js framework as long as PostsCount did not finished
+This file is placed in the Home page directory. It is called by the Next.js framework as long as <code>PostsCount</code> has not finished loading
+
 
 ```ts
 const Loading: FC = () => {
@@ -76,8 +78,8 @@ const Loading: FC = () => {
 
 
 <h2>error.tsx</h2>
-in Home page directory
-called by next.js framework when PostsCount throw exception
+This file is placed in the Home page directory. It is called by the Next.js framework when <code>PostsCount</code> throws an exception
+
 
 ```ts
 const Error: FC<ErrorProps> = ({ error, reset }) => {
