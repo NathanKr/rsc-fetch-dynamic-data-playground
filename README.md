@@ -1,15 +1,15 @@
 <h2>Project Description</h2>
-This project demonstrates the use of React Server Components (RSC) in Next.js to handle dynamic server-side rendering (SSR) with proper error and loading states. The project includes server-side data fetching, error handling, and dynamic rendering using Next.js components.
+This project showcases the power of React Server Components (RSC) in Next.js for dynamic server-side rendering (SSR) with robust error and loading state handling. It demonstrates server-side data fetching, error management, and dynamic UI rendering using Next.js components.
 
 
 
 <h2>Motivation</h2>
-  In the first two references, <a href='#ref1'>[1]</a> and <a href='#ref2'>[2]</a>, we explored RSC vs RCC for 'hello world' and static data fetching (SSG). Now, it’s time to fetch data dynamically (SSR) using RSC. Unlike SSG (build time), where there’s no need to handle errors and loading states, SSR requires proper handling for a better user experience. This project addresses the following key questions:
+  Building upon the foundation established in the references (links provided), this project delves deeper into RSC's capabilities for dynamic data fetching. Unlike SSG (static site generation), which doesn't necessitate error and loading states (as data is pre-fetched during build time), SSR requires careful handling of these states to deliver a seamless user experience. This project tackles essential questions:
 
 <ul>
-<li>how to do it in next.js ??</li>
-<li>how to handle error in server component ?</li>
-<li>how to handle loading in server component ??</li>
+<li>How to implement dynamic data fetching using RSC in Next.js?</li>
+<li>How to effectively handle errors within server components to ensure user-friendliness ?</li>
+<li>How to render appropriate loading states while RSC components are fetching data ?</li>
 </ul>
 
 
@@ -25,7 +25,10 @@ pnpm i
 ```bash
 pnpm run dev
 ```
-<p>Use the following setup to test error handling: replace <code>GOOD_POSTS_URL</code> with <code>BAD_POSTS_URL</code> to issue an error.</p>
+
+<h3>Simulating Error Handling</h3>
+
+To test error handling functionality, replace the GOOD_POSTS_URL constant with an invalid URL that will trigger a fetch error. This enables you to observe how errors are gracefully handled and displayed.
 
 
 <h2>Home page</h2>
