@@ -103,10 +103,6 @@ const Error: FC<ErrorProps> = ({ error, reset }) => {
 <img src='./figs/error.png'>
 
 
-<h2 id="points-of-interest">Points of Interest</h2>
-<ul>
-    <li>why error.tsx has "use client"</li>
-</ul>
 
 <h2 id="references">References</h2>
 <ul>
