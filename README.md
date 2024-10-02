@@ -90,13 +90,18 @@ const Error: FC<ErrorProps> = ({ error, reset }) => {
 ```
 
 <h2>Demo - Loading</h2>
+This image show the UI while PostsCount fetch data
 
 <img src='./figs/loading.png'/>
 
 <h2>Demo - After Loading</h2>
+This image show the UI after PostsCount finished fetching data
+
 <img src='./figs/after-loading.png'/>
 
 <h2>Error</h2>
+This image show the UI after PostsCount throws exception
+
 <img src='./figs/error.png'>
 
 <h2>SSR in action</h2>
