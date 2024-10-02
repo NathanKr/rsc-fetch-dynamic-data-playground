@@ -2,7 +2,7 @@
 This project showcases the power of React Server Components in Next.js to handle <strong>dynamic data fetching</strong>, <strong>error management</strong>, and <strong>loading state handling</strong>. It demonstrates server-side data fetching, error management, and dynamic UI rendering using Next.js components.
 
 <h2>Motivation</h2>
-Building upon the foundation established in the references (links provided), this project delves deeper into RSC's capabilities for dynamic data fetching. Unlike SSG (static site generation), which doesn't necessitate error and loading states (as data is pre-fetched during build time), SSR requires careful handling of these states to deliver a seamless user experience. This project tackles essential questions:
+Building upon the foundation established in the <a href='#references'>references</a>, this project delves deeper into RSC's capabilities for dynamic data fetching. Unlike SSG (static site generation), which doesn't necessitate error and loading states (as data is pre-fetched during build time), SSR (Server Side Rendering) requires careful handling of these states to deliver a seamless user experience. This project tackles essential questions:
 
 <ul>
     <li>How to implement dynamic data fetching using RSC in Next.js.</li>
@@ -65,7 +65,7 @@ export default async function PostsCount() {
 ```
 
 <h2>loading.tsx</h2>
-<p>This file is placed in the <code>Home</code> page directory. It is rendered by Next.js while the <code>PostsCount</code> component is still loading.</p>
+<p>This file is placed in the <code>Home</code> page directory. It is called and rendered by Next.js framework while the <code>PostsCount</code> component is still loading.</p>
 
 
 ```ts
@@ -100,7 +100,7 @@ const Error: FC<ErrorProps> = ({ error, reset }) => {
 <img src='./figs/error.png'>
 
 <h2>SSR in action</h2>
-Using "View Source," you can clearly see that the fetch result is rendered dynamically as html on the server (SSR) and send to the browser for diaply
+Using "View Source," you can clearly see that the fetch result is rendered dynamically as html on the server (SSR) and send to the browser for display
 
 <img src='./figs/ssr-in-action.png'/>
 
